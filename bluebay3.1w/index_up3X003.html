@@ -1,0 +1,78 @@
+<html>
+<title>藍灣Villa</title>
+<head>
+<body onmousedown="return false" onselectstart="return false">
+  <p>
+<body oncontextmenu="return false">
+<body background=IMAG4627_0.jpg>
+<H5 ALIGN=left><font color="#FF0000"><font size=+2>261宜蘭縣頭城鎮協天路676號</font> </H5></font>
+<marquee behavior=alternate>聲明,在頭城海水浴場淹沒之後***已全面改為住宅***禁止出租行為</marquee>
+
+<img src="bluebay.png">
+
+
+<audio src="media/DLD.mp3" autoplay></audio>
+
+<style>
+  /* 在這裡加入 CSS 樣式 */
+  .time-container {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+  }
+  .city {
+    margin-bottom: 10px;
+  }
+  .time {
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <div id="world-clock" class="time-container"></div>
+
+  <script>
+    function updateClock() {
+      const timeElement = document.getElementById('world-clock');
+      timeElement.innerHTML = ''; // 清除舊內容
+
+      // 設定城市和時區偏移
+      const cities = [
+        { name: '網站維護待更新 現在時間', offset: 8 },
+
+      ];
+
+      cities.forEach(city => {
+        const now = new Date();
+        const cityTime = new Date(now.getTime() + (city.offset * 60 * 60 * 1000));
+
+        const hours = cityTime.getUTCHours();
+        const minutes = cityTime.getUTCMinutes();
+        const seconds = cityTime.getUTCSeconds();
+
+        const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
+
+        const cityDiv = document.createElement('div');
+        cityDiv.className = 'city';
+        cityDiv.innerHTML = `
+          <div class="name">${city.name}</div>
+          <div class="time">${formattedTime}</div>
+        `;
+        timeElement.appendChild(cityDiv);
+      });
+    }
+
+    setInterval(updateClock, 1000); // 每秒更新一次
+    updateClock(); // 初始載入
+  </script>
+
+
+<audio src="DLD.mp3" autoplay controls></audio>
+
+
+</head>
+</p>
+</body>
+</body>
+</body>
+</html>
